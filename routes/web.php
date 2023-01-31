@@ -13,6 +13,13 @@
 |
 */
 
-$router->get('/', function () use ($router) {
-    return $router->app->version();
+// $router->get('/', function () use ($router) {
+//     return $router->app->version();
+// });
+
+$router->get('/', ['uses' => 'HomeController@index']);
+
+// User
+$router->group(['prefix' => 'user'], function () use ($router){
+    $router->get('/', ['uses' => 'API\UserController@index']);
 });
