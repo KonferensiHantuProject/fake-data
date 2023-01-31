@@ -3,17 +3,27 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Cviebrock\EloquentSluggable\Sluggable;
 
 class Post extends Model
 {
+    use Sluggable, HasFactory;
+
+    
     /**
-     * The attributes that are mass assignable.
+     * Return the sluggable configuration array for this model.
      *
-     * @var array
+     * @return array
      */
-    protected $fillable = [
-        'username', 'email',
-    ];
+    public function sluggable()
+    {
+        return [
+            'slug' => [
+                'source' => 'title'
+            ]
+        ];
+    }
 
     /**
      * Get the user that owns the comment.
