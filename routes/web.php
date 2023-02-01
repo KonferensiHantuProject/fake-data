@@ -32,4 +32,5 @@ $router->group(['prefix' => 'users'], function () use ($router){
 $router->group(['prefix' => 'posts'], function () use ($router){
     $router->get('/', ['uses' => 'API\PostController@index']);
     $router->get('/{id}', ['uses' => 'API\PostController@show']);
+    $router->post('/', ['uses' => 'API\PostController@store']);
 });
