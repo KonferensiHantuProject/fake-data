@@ -25,7 +25,7 @@
             <div class="col-md-12">
                 <div class="d-flex flex-column">
                     <h1 class="display-2 text-center mb-2">TRY IT</h1>
-                    <a href="https://github.com/MuhammadNazhimMaulana" target="_blank" class="text-center">Bone</a>
+                    <a href="/users" target="_blank" class="text-center">/users</a>
                 </div>
             </div>
         </div>
