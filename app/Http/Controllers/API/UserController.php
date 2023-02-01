@@ -26,6 +26,7 @@ class UserController extends Controller
     {
         // Find User
         $data = User::find($id);
+        if(!$data) return $this->error(404, null, 'User Not Found');
 
         return $this->success($data);
     }

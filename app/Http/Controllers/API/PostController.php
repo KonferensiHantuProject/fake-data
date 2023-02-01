@@ -31,4 +31,30 @@ class PostController extends Controller
         return $this->success($data);
     }
 
+    // Add Data
+    public function store(Request $request)
+    {
+        DB::beginTransaction();
+        try{
+
+            $this->validate($request, [
+                'user_id' => 'required|numeric',
+                'title' => 'required',
+                'content' => 'required'
+            ]);
+
+            // Prepare Data
+            $post = new Post;
+            $post->user_id = $request->user_id;
+            $post->title = $request->title;
+            $post->content = $request->content;
+            $post->save();
+
+            return $this->success($post);
+        }catch(Exception $e){
+            DB::rollback();
+            return $this->error(400, null, $e);
+        }
+    }
+
 }
