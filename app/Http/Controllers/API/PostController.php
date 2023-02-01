@@ -57,4 +57,22 @@ class PostController extends Controller
         }
     }
 
+    // Delete Data
+    public function delete(int $id)
+    {
+        DB::beginTransaction();
+        try{
+            // Prepare Data
+            $post = Post::find($id);
+            if(!$post) return $this->error(404, null, 'Post Not Found');
+
+            // Delete User
+            $post->delete();
+
+            return $this->success('Post Deleted');
+        }catch(Exception $e){
+            DB::rollback();
+            return $this->error(400, null, $e->getMessage());
+        }
+    }
 }
