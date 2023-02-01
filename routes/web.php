@@ -20,6 +20,8 @@
 $router->get('/', ['uses' => 'HomeController@index']);
 
 // User
-$router->group(['prefix' => 'user'], function () use ($router){
+$router->group(['prefix' => 'users'], function () use ($router){
     $router->get('/', ['uses' => 'API\UserController@index']);
+    $router->get('/{id}', ['uses' => 'API\UserController@show']);
+    $router->post('/', ['uses' => 'API\UserController@store']);
 });
