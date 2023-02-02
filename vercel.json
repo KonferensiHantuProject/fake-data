@@ -21,6 +21,7 @@
 
         "CACHE_DRIVER": "file",
         "LOG_CHANNEL": "stack",
-        "QUEUE_CONNECTION": "sync"
+        "QUEUE_CONNECTION": "sync",
+        "SESSION_DRIVER": "cookie"
     }
 }
