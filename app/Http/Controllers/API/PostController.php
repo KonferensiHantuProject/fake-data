@@ -57,6 +57,34 @@ class PostController extends Controller
         }
     }
 
+    // Update Data
+    public function update(int $id, Request $request)
+    {
+        DB::beginTransaction();
+        try{
+
+            $this->validate($request, [
+                'user_id' => 'required|numeric',
+                'title' => 'required',
+                'content' => 'required'
+            ]);
+
+            // Prepare Data
+            $post = Post::find($id);
+            if(!$post) return $this->error(404, null, 'Post Not Found');
+
+            $post->user_id = $request->user_id;
+            $post->title = $request->title;
+            $post->content = $request->content;
+            $post->save();
+
+            return $this->success($post);
+        }catch(Exception $e){
+            DB::rollback();
+            return $this->error(400, null, $e);
+        }
+    }
+
     // Delete Data
     public function delete(int $id)
     {
