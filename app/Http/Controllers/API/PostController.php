@@ -75,6 +75,7 @@ class PostController extends Controller
 
             $post->user_id = $request->user_id;
             $post->title = $request->title;
+            $post->slug = $request->slug;
             $post->content = $request->content;
             $post->save();
 
