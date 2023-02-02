@@ -26,6 +26,7 @@
                 <div class="d-flex flex-column">
                     <h1 class="display-2 text-center mb-2">TRY IT</h1>
                     <a href="/users" target="_blank" class="text-center">/users</a>
+                    <a href="/posts" target="_blank" class="text-center">/posts</a>
                 </div>
             </div>
         </div>
