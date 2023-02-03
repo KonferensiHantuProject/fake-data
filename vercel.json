@@ -13,7 +13,6 @@
 
 
         "CACHE_DRIVER": "file",
-        "LOG_CHANNEL": "stderr",
         "SESSION_DRIVER": "cookie"
     }
 }
