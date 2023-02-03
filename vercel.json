@@ -1,13 +1,11 @@
 {
-    "builds": [
-      {
-        "src": "public/index.php",
-        "use": "now-php"
-      }
-    ],
-    "routes": [
-      { "src": "/(.*)", "dest": "public/index.php" }
-    ],
+    "functions": {
+        "api/index.php": { "runtime": "vercel-php@0.5.2" }
+    },
+    "routes": [{
+        "src": "/(.*)",
+        "dest": "/api/index.php"
+    }],
     "env": {
         "APP_ENV": "local",
         "APP_DEBUG": "true",
@@ -17,5 +15,4 @@
         "CACHE_DRIVER": "file",
         "QUEUE_CONNECTION": "sync"
     }
-  }
-  
+}
