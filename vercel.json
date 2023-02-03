@@ -13,7 +13,7 @@
         "APP_URL": "https://yourproductionurl.com",
 
         "CACHE_DRIVER": "file",
-        "LOG_CHANNEL": "stderr",
+        "LOG_CHANNEL": "stack",
         "QUEUE_CONNECTION": "sync",
         "SESSION_DRIVER": "array"
     }
