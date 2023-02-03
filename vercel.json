@@ -5,5 +5,15 @@
     "routes": [{
         "src": "/(.*)",
         "dest": "/api/index.php"
-    }]
+    }],
+    "env": {
+        "APP_ENV": "local",
+        "APP_DEBUG": "true",
+        "APP_URL": "https://yourproductionurl.com",
+
+
+        "CACHE_DRIVER": "file",
+        "LOG_CHANNEL": "stderr",
+        "QUEUE_CONNECTION": "sync"
+    }
 }
