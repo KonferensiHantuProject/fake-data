@@ -16,7 +16,7 @@ class PostController extends Controller
     // All Data
     public function index()
     {
-        $data = Post::all();
+        $data = Post::with('user')->get();
 
         return $this->success($data);
     }
@@ -25,9 +25,9 @@ class PostController extends Controller
     public function show(int $id)
     {
         // Find Post
-        $data = Post::find($id);
+        $data = Post::with('user')->find($id);
         if(!$data) return $this->error(404, null, 'Post Not Found');
-
+        
         return $this->success($data);
     }
 
