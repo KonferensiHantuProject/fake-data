@@ -8,7 +8,7 @@
                 <div class="d-flex flex-column">
                     <h1 class="display-1 text-center mb-2">FREE API</h1>
                     <p class="h4 text-center mb-2">Feel Free to Use It</p>
-                    <p class="h6 text-center mb-2">Do Practices with It</p>
+                    <p class="h6 text-center mb-2">Do Some Practices with It</p>
                 </div>
             </div>
         </div>
