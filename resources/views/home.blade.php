@@ -19,7 +19,7 @@
             <div class="col-md-12 mb-5">
                 <div class="d-flex flex-column">
                     <h1 class="display-2 text-center mb-2">WHAT FOR?</h1>
-                    <p class="h6 text-center mb-2">Whenever you actually want to try to build a portofolio or for practices that need a dummy data</p>
+                    <p class="h6 text-center mb-2">Whenever you actually want to try to build a portofolio project or for practices that need a dummy data</p>
                 </div>
             </div>
             <div class="col-md-12">
